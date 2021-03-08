@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+
+}
+#vueApp {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 500px;
+    display: block;
+    padding: 10px;
+    font-size: 24px;
+}
+
+span.welcome {
+    text-align: center;
+}
+ul.welcome {
+    text-align:center;
+    padding:5px;
+    list-style-position: inside;
+}
+h2.welcome {
+    text-align: center;
+}
+.button {
+    margin-left:auto;
+}

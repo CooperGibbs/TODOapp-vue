@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://unpkg.com/vue"></script>
+        <title>My VueJS app</title>
+    </head>
+    <body>
+
+        <div id="vueApp">
+                <h1 v-text="welcomeMessage"></h1>
+                <input v-model="newItem" v-on:keyup.enter='addItem'/>
+                <span><button @click.prevent="addItem">ADD</button></span>
+                <ul v-for="i in list" v-bind:key="i.id">
+                    <li> <button @click=editItem(i)> <small>  {{i.completed}}: </small></button>
+                     {{i.item}} 
+                        <button @click="removeItem(i)">REMOVE</button>
+                    </li>
+                </ul>
+        </div>
+
+        <script src="js/vue.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
