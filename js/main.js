@@ -1,4 +1,4 @@
-const storageID = 'todo-storage'
+const storageID = 'todoStorage'
 let app = new Vue({
     el: "#vueApp",
     data: {
@@ -28,7 +28,7 @@ let app = new Vue({
            if(i.completed === 'Incomplete') {
                 this.list.push({id:++this.nextIndex, item: i.item, completed: 'Complete'});
            } else {
-                this.list.unshift({id:++this.newxtIndex, item: i.item, completed: 'Incomplete'});
+                this.list.unshift({id:++this.nextIndex, item: i.item, completed: 'Incomplete'});
            }
            localStorage.setItem(storageID, JSON.stringify(this.list));
         }
